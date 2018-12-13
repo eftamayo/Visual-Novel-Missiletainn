@@ -1773,7 +1773,7 @@ def main():
                 scene20.bg_img('Mystery_Sanctuary.jpg')
                 scene20.ins_script('scene20.txt')
                 scene20.ins_sprite('Klaus.png.png',2,2,250,80,900,1160)
-                scene20.ins_sprite('Klaus.png.png',2,2,250,80,900,1160)
+                scene20.ins_sprite('Klaus.png.png',5,5,250,80,900,1160)
                 scene20.ins_audio('Made in Abyss OST - Tomorrow.mp3')
                 scene20.run_scene('Futura Book font.ttf', 23)
             elif lanaya_chosen < 2 and not info_purchased:
