@@ -21,21 +21,7 @@ def draw_button(screenname,x,y,width,height,color1=(255,255,255),color2 = (0,0,0
 def textbox (screenname,fontname,fontsize,text,colors,x,y):
     default_font = pygame.font.Font(fontname,fontsize)
     screenname.blit(default_font.render(text,1,colors),(x,y))
-def start_ending():
-    img = pygame.image.load('ending.jpg')
-    img = pygame.transform.scale(img, (1280, 720))
-    done = False
-    while not done:
-        mouse_position = pygame.mouse.get_pos()
-        pygame.event.get()
-        pygame.display.flip()
-        screen.blit(img,(0,0))
-        draw_button(screen,1100,650,120,40)
-        textbox(screen,'BEBAS.ttf',22,'RETURN',(255,255,255),1120,660)
-        for event in pygame.event.get():
-            if event.type == pygame.MOUSEBUTTONDOWN and (mouse_position[0]>1100 and mouse_position[0]<1220) and (mouse_position[1]>650 and mouse_position[1]<690):
-                done = True
-                start_menu()
+
 def start_shop():
     global rope_purchased
     global dagger_purchased
@@ -213,8 +199,6 @@ def start_shop():
             elif event.type == pygame.MOUSEBUTTONDOWN and error_msg and mouse_position[0]>1030 and mouse_position[0]<1070 and mouse_position[1]>510 and mouse_position[1]<550:
                 error_msg = 0
 def start_menu():
-    global asterios_killed
-    global final_yorjan_chosen
     global shop_access
     global lanaya_chosen
     global yorjan_chosen
@@ -331,46 +315,46 @@ def start_menu():
             draw_button(screen,750,490,300,40)
             draw_button(screen,750,570,300,40)
             draw_button(screen,1100,650,120,40)
-            if len (finallist1) == 13:
+            if len (finallist1) == 11:
                 textbox(screen,'BEBAS.ttf',27,'SLOT 1',(255,255,255),365,258)
-            elif len (finallist1) == 14:
-                textbox(screen,'BEBAS.ttf',27,finallist1[13],(255,255,255),300,258)
-            if len (finallist2) == 13:
+            elif len (finallist1) == 12:
+                textbox(screen,'BEBAS.ttf',27,finallist1[11],(255,255,255),300,258)
+            if len (finallist2) == 11:
                 textbox(screen,'BEBAS.ttf',27,'SLOT 2',(255,255,255),365,338)
-            elif len (finallist2) == 14:
-                textbox(screen,'BEBAS.ttf',27,finallist2[13],(255,255,255),300,338)
-            if len (finallist3) == 13:
+            elif len (finallist2) == 12:
+                textbox(screen,'BEBAS.ttf',27,finallist2[11],(255,255,255),300,338)
+            if len (finallist3) == 11:
                 textbox(screen,'BEBAS.ttf',27,'SLOT 3',(255,255,255),365,418)
-            elif len (finallist3) == 14:
-                textbox(screen,'BEBAS.ttf',27,finallist3[13],(255,255,255),300,418)
-            if len (finallist4) == 13:
+            elif len (finallist3) == 12:
+                textbox(screen,'BEBAS.ttf',27,finallist3[11],(255,255,255),300,418)
+            if len (finallist4) == 11:
                 textbox(screen,'BEBAS.ttf',27,'SLOT 4',(255,255,255),365,498)
-            elif len (finallist4) == 14:
-                textbox(screen,'BEBAS.ttf',27,finallist4[13],(255,255,255),300,498)
-            if len (finallist5) == 13:
+            elif len (finallist4) == 12:
+                textbox(screen,'BEBAS.ttf',27,finallist4[11],(255,255,255),300,498)
+            if len (finallist5) == 11:
                 textbox(screen,'BEBAS.ttf',27,'SLOT 5',(255,255,255),365,578)
-            elif len (finallist5) == 14:
-                textbox(screen,'BEBAS.ttf',27,finallist5[13],(255,255,255),300,578)
-            if len (finallist6) == 13:
+            elif len (finallist5) == 12:
+                textbox(screen,'BEBAS.ttf',27,finallist5[11],(255,255,255),300,578)
+            if len (finallist6) == 11:
                 textbox(screen,'BEBAS.ttf',27,'SLOT 6',(255,255,255),865,258)
-            elif len (finallist6) == 14:
-                textbox(screen,'BEBAS.ttf',27,finallist6[13],(255,255,255),800,258)
-            if len (finallist7) == 13:
+            elif len (finallist6) == 12:
+                textbox(screen,'BEBAS.ttf',27,finallist6[11],(255,255,255),800,258)
+            if len (finallist7) == 11:
                 textbox(screen,'BEBAS.ttf',27,'SLOT 7',(255,255,255),865,338)
-            elif len (finallist7) == 14:
-                textbox(screen,'BEBAS.ttf',27,finallist7[13],(255,255,255),800,338)
-            if len (finallist8) == 13:
+            elif len (finallist7) == 12:
+                textbox(screen,'BEBAS.ttf',27,finallist7[11],(255,255,255),800,338)
+            if len (finallist8) == 11:
                 textbox(screen,'BEBAS.ttf',27,'SLOT 8',(255,255,255),865,418)
-            elif len (finallist8) == 14:
-                textbox(screen,'BEBAS.ttf',27,finallist8[13],(255,255,255),800,418)
-            if len (finallist9) == 13:
+            elif len (finallist8) == 12:
+                textbox(screen,'BEBAS.ttf',27,finallist8[11],(255,255,255),800,418)
+            if len (finallist9) == 11:
                 textbox(screen,'BEBAS.ttf',27,'SLOT 9',(255,255,255),865,498)
-            elif len (finallist9) == 14:
-                textbox(screen,'BEBAS.ttf',27,finallist9[13],(255,255,255),800,498)
-            if len (finallist10) == 13:
+            elif len (finallist9) == 12:
+                textbox(screen,'BEBAS.ttf',27,finallist9[11],(255,255,255),800,498)
+            if len (finallist10) == 11:
                 textbox(screen,'BEBAS.ttf',27,'SLOT 10',(255,255,255),865,578)
-            elif len (finallist10) == 14:
-                textbox(screen,'BEBAS.ttf',27,finallist10[13],(255,255,255),800,578)
+            elif len (finallist10) == 12:
+                textbox(screen,'BEBAS.ttf',27,finallist10[11],(255,255,255),800,578)
             textbox(screen,'BEBAS.ttf',25,'RETURN',(255,255,255),1120,660)
         for event in pygame.event.get():
             if event.type == pygame.MOUSEBUTTONDOWN and load_on == 0 and (mouse_position[0]>500 and mouse_position[0]<800) and (mouse_position[1]>510 and mouse_position[1]<570):
@@ -388,8 +372,6 @@ def start_menu():
                 shop_access = 0
                 lanaya_chosen = 0
                 yorjan_chosen = 0
-                final_yorjan_chosen = 0
-                asterios_killed = 0
                 done = True
             elif event.type == pygame.MOUSEBUTTONDOWN and load_on == 0 and (mouse_position[0]>500 and mouse_position[0]<800) and (mouse_position[1]>380 and mouse_position[1]<440):
                 load_on = 1
@@ -410,8 +392,6 @@ def start_menu():
                 shop_access = int(file_details[8])
                 lanaya_chosen = int(file_details[9])
                 yorjan_chosen = int(file_details[10])
-                asterios_killed = int(file_details[11])
-                final_yorjan_chosen = int(file_details[12])
                 done = True
             elif event.type == pygame.MOUSEBUTTONDOWN and load_on == 1 and (mouse_position[0]>250 and mouse_position[0]<550) and (mouse_position[1]>330 and mouse_position[1]<370):
                 open_file = open('savefile2.txt','r',encoding = 'utf-8')
@@ -428,8 +408,6 @@ def start_menu():
                 shop_access = int(file_details[8])
                 lanaya_chosen = int(file_details[9])
                 yorjan_chosen = int(file_details[10])
-                asterios_killed = int(file_details[11])
-                final_yorjan_chosen = int(file_details[12])
                 done = True
             elif event.type == pygame.MOUSEBUTTONDOWN and load_on == 1 and (mouse_position[0]>250 and mouse_position[0]<550) and (mouse_position[1]>410 and mouse_position[1]<450):
                 open_file = open('savefile3.txt','r',encoding = 'utf-8')
@@ -446,8 +424,6 @@ def start_menu():
                 shop_access = int(file_details[8])
                 lanaya_chosen = int(file_details[9])
                 yorjan_chosen = int(file_details[10])
-                asterios_killed = int(file_details[11])
-                final_yorjan_chosen = int(file_details[12])
                 done = True
             elif event.type == pygame.MOUSEBUTTONDOWN and load_on == 1 and (mouse_position[0]>250 and mouse_position[0]<550) and (mouse_position[1]>490 and mouse_position[1]<540):
                 open_file = open('savefile4.txt','r',encoding = 'utf-8')
@@ -464,8 +440,6 @@ def start_menu():
                 shop_access = int(file_details[8])
                 lanaya_chosen = int(file_details[9])
                 yorjan_chosen = int(file_details[10])
-                asterios_killed = int(file_details[11])
-                final_yorjan_chosen = int(file_details[12])
                 done = True
             elif event.type == pygame.MOUSEBUTTONDOWN and load_on == 1 and (mouse_position[0]>250 and mouse_position[0]<550) and (mouse_position[1]>570 and mouse_position[1]<610):
                 open_file = open('savefile5.txt','r',encoding = 'utf-8')
@@ -482,8 +456,6 @@ def start_menu():
                 shop_access = int(file_details[8])
                 lanaya_chosen = int(file_details[9])
                 yorjan_chosen = int(file_details[10])
-                asterios_killed = int(file_details[11])
-                final_yorjan_chosen = int(file_details[12])
                 done = True
             elif event.type == pygame.MOUSEBUTTONDOWN and load_on == 1 and (mouse_position[0]>750 and mouse_position[0]<1050) and (mouse_position[1]>250 and mouse_position[1]<290):
                 open_file = open('savefile6.txt','r',encoding = 'utf-8')
@@ -500,8 +472,6 @@ def start_menu():
                 shop_access = int(file_details[8])
                 lanaya_chosen = int(file_details[9])
                 yorjan_chosen = int(file_details[10])
-                asterios_killed = int(file_details[11])
-                final_yorjan_chosen = int(file_details[12])
                 done = True
             elif event.type == pygame.MOUSEBUTTONDOWN and load_on == 1 and (mouse_position[0]>750 and mouse_position[0]<1050) and (mouse_position[1]>330 and mouse_position[1]<370):
                 open_file = open('savefile7.txt','r',encoding = 'utf-8')
@@ -518,8 +488,6 @@ def start_menu():
                 shop_access = int(file_details[8])
                 lanaya_chosen = int(file_details[9])
                 yorjan_chosen = int(file_details[10])
-                asterios_killed = int(file_details[11])
-                final_yorjan_chosen = int(file_details[12])
                 done = True
             elif event.type == pygame.MOUSEBUTTONDOWN and load_on == 1 and (mouse_position[0]>750 and mouse_position[0]<1050) and (mouse_position[1]>410 and mouse_position[1]<450):
                 open_file = open('savefile8.txt','r',encoding = 'utf-8')
@@ -536,8 +504,6 @@ def start_menu():
                 shop_access = int(file_details[8])
                 lanaya_chosen = int(file_details[9])
                 yorjan_chosen = int(file_details[10])
-                asterios_killed = int(file_details[11])
-                final_yorjan_chosen = int(file_details[12])
                 done = True
             elif event.type == pygame.MOUSEBUTTONDOWN and load_on == 1 and (mouse_position[0]>750 and mouse_position[0]<1050) and (mouse_position[1]>490 and mouse_position[1]<530):
                 open_file = open('savefile9.txt','r',encoding = 'utf-8')
@@ -554,8 +520,6 @@ def start_menu():
                 shop_access = int(file_details[8])
                 lanaya_chosen = int(file_details[9])
                 yorjan_chosen = int(file_details[10])
-                asterios_killed = int(file_details[11])
-                final_yorjan_chosen = int(file_details[12])
                 done = True
             elif event.type == pygame.MOUSEBUTTONDOWN and load_on == 1 and (mouse_position[0]>750 and mouse_position[0]<1050) and (mouse_position[1]>570 and mouse_position[1]<610):
                 open_file = open('savefile10.txt','r',encoding = 'utf-8')
@@ -572,8 +536,6 @@ def start_menu():
                 shop_access = int(file_details[8])
                 lanaya_chosen = int(file_details[9])
                 yorjan_chosen = int(file_details[10])
-                asterios_killed = int(file_details[11])
-                final_yorjan_chosen = int(file_details[12])
                 done = True
 class scene():
     def __init__(self):
@@ -614,8 +576,6 @@ class scene():
     def ins_audio(self,filename):
         self.bgm = filename
     def run_scene(self,font,fontsize):
-        global asterios_killed
-        global yorjan_chosen
         global what_scene
         global current_line
         global rope_purchased
@@ -815,8 +775,6 @@ class scene():
                     savefile.write(str(shop_access)+'\n')
                     savefile.write(str(lanaya_chosen)+'\n')
                     savefile.write(str(yorjan_chosen)+'\n')
-                    savefile.write(str(asterios_killed)+'\n')
-                    savefile.write(str(final_yorjan_chosen)+'\n')
                     savefile.write(str(now.year)+':'+str(now.month)+':'+str(now.day)+':'+str(now.hour)+':'+str(now.minute)+':'+str(now.second))
                     savefile.close()
                     self.save_on = 0
@@ -833,8 +791,6 @@ class scene():
                     savefile.write(str(shop_access)+'\n')
                     savefile.write(str(lanaya_chosen)+'\n')
                     savefile.write(str(yorjan_chosen)+'\n')
-                    savefile.write(str(asterios_killed)+'\n')
-                    savefile.write(str(final_yorjan_chosen)+'\n')
                     savefile.write(str(now.year)+':'+str(now.month)+':'+str(now.day)+':'+str(now.hour)+':'+str(now.minute)+':'+str(now.second))
                     savefile.close()
                     self.save_on = 0
@@ -851,8 +807,6 @@ class scene():
                     savefile.write(str(shop_access)+'\n')
                     savefile.write(str(lanaya_chosen)+'\n')
                     savefile.write(str(yorjan_chosen)+'\n')
-                    savefile.write(str(asterios_killed)+'\n')
-                    savefile.write(str(final_yorjan_chosen)+'\n')
                     savefile.write(str(now.year)+':'+str(now.month)+':'+str(now.day)+':'+str(now.hour)+':'+str(now.minute)+':'+str(now.second))
                     savefile.close()
                     self.save_on = 0
@@ -869,8 +823,6 @@ class scene():
                     savefile.write(str(shop_access)+'\n')
                     savefile.write(str(lanaya_chosen)+'\n')
                     savefile.write(str(yorjan_chosen)+'\n')
-                    savefile.write(str(asterios_killed)+'\n')
-                    savefile.write(str(final_yorjan_chosen)+'\n')
                     savefile.write(str(now.year)+':'+str(now.month)+':'+str(now.day)+':'+str(now.hour)+':'+str(now.minute)+':'+str(now.second))
                     savefile.close()
                     self.save_on = 0
@@ -887,8 +839,6 @@ class scene():
                     savefile.write(str(shop_access)+'\n')
                     savefile.write(str(lanaya_chosen)+'\n')
                     savefile.write(str(yorjan_chosen)+'\n')
-                    savefile.write(str(asterios_killed)+'\n')
-                    savefile.write(str(final_yorjan_chosen)+'\n')
                     savefile.write(str(now.year)+':'+str(now.month)+':'+str(now.day)+':'+str(now.hour)+':'+str(now.minute)+':'+str(now.second))
                     savefile.close()
                     self.save_on = 0
@@ -905,8 +855,6 @@ class scene():
                     savefile.write(str(shop_access)+'\n')
                     savefile.write(str(lanaya_chosen)+'\n')
                     savefile.write(str(yorjan_chosen)+'\n')
-                    savefile.write(str(asterios_killed)+'\n')
-                    savefile.write(str(final_yorjan_chosen)+'\n')
                     savefile.write(str(now.year)+':'+str(now.month)+':'+str(now.day)+':'+str(now.hour)+':'+str(now.minute)+':'+str(now.second))
                     savefile.close()
                     self.save_on = 0
@@ -923,8 +871,6 @@ class scene():
                     savefile.write(str(shop_access)+'\n')
                     savefile.write(str(lanaya_chosen)+'\n')
                     savefile.write(str(yorjan_chosen)+'\n')
-                    savefile.write(str(asterios_killed)+'\n')
-                    savefile.write(str(final_yorjan_chosen)+'\n')
                     savefile.write(str(now.year)+':'+str(now.month)+':'+str(now.day)+':'+str(now.hour)+':'+str(now.minute)+':'+str(now.second))
                     savefile.close()
                     self.save_on = 0
@@ -941,8 +887,6 @@ class scene():
                     savefile.write(str(shop_access)+'\n')
                     savefile.write(str(lanaya_chosen)+'\n')
                     savefile.write(str(yorjan_chosen)+'\n')
-                    savefile.write(str(asterios_killed)+'\n')
-                    savefile.write(str(final_yorjan_chosen)+'\n')
                     savefile.write(str(now.year)+':'+str(now.month)+':'+str(now.day)+':'+str(now.hour)+':'+str(now.minute)+':'+str(now.second))
                     savefile.close()
                     self.save_on = 0
@@ -959,8 +903,6 @@ class scene():
                     savefile.write(str(shop_access)+'\n')
                     savefile.write(str(lanaya_chosen)+'\n')
                     savefile.write(str(yorjan_chosen)+'\n')
-                    savefile.write(str(asterios_killed)+'\n')
-                    savefile.write(str(final_yorjan_chosen)+'\n')
                     savefile.write(str(now.year)+':'+str(now.month)+':'+str(now.day)+':'+str(now.hour)+':'+str(now.minute)+':'+str(now.second))
                     savefile.close()
                     self.save_on = 0
@@ -977,8 +919,6 @@ class scene():
                     savefile.write(str(shop_access)+'\n')
                     savefile.write(str(lanaya_chosen)+'\n')
                     savefile.write(str(yorjan_chosen)+'\n')
-                    savefile.write(str(asterios_killed)+'\n')
-                    savefile.write(str(final_yorjan_chosen)+'\n')
                     savefile.write(str(now.year)+':'+str(now.month)+':'+str(now.day)+':'+str(now.hour)+':'+str(now.minute)+':'+str(now.second))
                     savefile.close()
                     self.save_on = 0
@@ -997,8 +937,6 @@ class scene():
                     shop_access = int(file_details[8])
                     lanaya_chosen = int(file_details[9])
                     yorjan_chosen = int(file_details[10])
-                    asterios_killed = int(file_details[11])
-                    final_yorjan_chosen = int(file_details[12])
                     self.load_on = 0
                     done = True
                 elif event.type == pygame.MOUSEBUTTONDOWN and self.load_on == 1 and (mouse_position[0]>970 and mouse_position[0]<1230) and (mouse_position[1]>150 and mouse_position[1]<180):
@@ -1016,8 +954,6 @@ class scene():
                     shop_access = int(file_details[8])
                     lanaya_chosen = int(file_details[9])
                     yorjan_chosen = int(file_details[10])
-                    asterios_killed = int(file_details[11])
-                    final_yorjan_chosen = int(file_details[12])
                     self.load_on = 0
                     done = True
                 elif event.type == pygame.MOUSEBUTTONDOWN and self.load_on == 1 and (mouse_position[0]>970 and mouse_position[0]<1230) and (mouse_position[1]>190 and mouse_position[1]<220):
@@ -1035,8 +971,6 @@ class scene():
                     shop_access = int(file_details[8])
                     lanaya_chosen = int(file_details[9])
                     yorjan_chosen = int(file_details[10])
-                    asterios_killed = int(file_details[11])
-                    final_yorjan_chosen = int(file_details[12])
                     self.load_on = 0
                     done = True
                 elif event.type == pygame.MOUSEBUTTONDOWN and self.load_on == 1 and (mouse_position[0]>970 and mouse_position[0]<1230) and (mouse_position[1]>230 and mouse_position[1]<260):
@@ -1054,8 +988,6 @@ class scene():
                     shop_access = int(file_details[8])
                     lanaya_chosen = int(file_details[9])
                     yorjan_chosen = int(file_details[10])
-                    asterios_killed = int(file_details[11])
-                    final_yorjan_chosen = int(file_details[12])
                     self.load_on = 0
                     done = True
                 elif event.type == pygame.MOUSEBUTTONDOWN and self.load_on == 1 and (mouse_position[0]>970 and mouse_position[0]<1230) and (mouse_position[1]>270 and mouse_position[1]<300):
@@ -1073,8 +1005,6 @@ class scene():
                     shop_access = int(file_details[8])
                     lanaya_chosen = int(file_details[9])
                     yorjan_chosen = int(file_details[10])
-                    asterios_killed = int(file_details[11])
-                    final_yorjan_chosen = int(file_details[12])
                     self.load_on = 0
                     done = True
                 elif event.type == pygame.MOUSEBUTTONDOWN and self.load_on == 1 and (mouse_position[0]>970 and mouse_position[0]<1230) and (mouse_position[1]>310 and mouse_position[1]<340):
@@ -1092,8 +1022,6 @@ class scene():
                     shop_access = int(file_details[8])
                     lanaya_chosen = int(file_details[9])
                     yorjan_chosen = int(file_details[10])
-                    asterios_killed = int(file_details[11])
-                    final_yorjan_chosen = int(file_details[12])
                     self.load_on = 0
                     done = True
                 elif event.type == pygame.MOUSEBUTTONDOWN and self.load_on == 1 and (mouse_position[0]>970 and mouse_position[0]<1230) and (mouse_position[1]>350 and mouse_position[1]<380):
@@ -1111,8 +1039,6 @@ class scene():
                     shop_access = int(file_details[8])
                     lanaya_chosen = int(file_details[9])
                     yorjan_chosen = int(file_details[10])
-                    asterios_killed = int(file_details[11])
-                    final_yorjan_chosen = int(file_details[12])
                     self.load_on = 0
                     done = True
                 elif event.type == pygame.MOUSEBUTTONDOWN and self.load_on == 1 and (mouse_position[0]>970 and mouse_position[0]<1230) and (mouse_position[1]>390 and mouse_position[1]<420):
@@ -1130,8 +1056,6 @@ class scene():
                     shop_access = int(file_details[8])
                     lanaya_chosen = int(file_details[9])
                     yorjan_chosen = int(file_details[10])
-                    asterios_killed = int(file_details[11])
-                    final_yorjan_chosen = int(file_details[12])
                     self.load_on = 0
                     done = True
                 elif event.type == pygame.MOUSEBUTTONDOWN and self.load_on == 1 and (mouse_position[0]>970 and mouse_position[0]<1230) and (mouse_position[1]>430 and mouse_position[1]<470):
@@ -1149,8 +1073,6 @@ class scene():
                     shop_access = int(file_details[8])
                     lanaya_chosen = int(file_details[9])
                     yorjan_chosen = int(file_details[10])
-                    asterios_killed = int(file_details[11])
-                    final_yorjan_chosen = int(file_details[12])
                     self.load_on = 0
                     done = True
                 elif event.type == pygame.MOUSEBUTTONDOWN and self.load_on == 1 and (mouse_position[0]>970 and mouse_position[0]<1230) and (mouse_position[1]>470 and mouse_position[1]<510):
@@ -1168,8 +1090,6 @@ class scene():
                     shop_access = int(file_details[8])
                     lanaya_chosen = int(file_details[9])
                     yorjan_chosen = int(file_details[10])
-                    asterios_killed = int(file_details[11])
-                    final_yorjan_chosen = int(file_details[12])
                     self.load_on = 0
                     done = True
             if menu_on: #opens the menu box
@@ -1204,46 +1124,46 @@ class scene():
                 draw_box(self.screen,970,390,260,30,color2 = (117,100,0))
                 draw_box(self.screen,970,430,260,30,color2 = (117,100,0))
                 draw_box(self.screen,970,470,260,30,color2 = (117,100,0))
-                if len (finallist1) == 13:
+                if len (finallist1) == 11:
                     textbox(self.screen,'DaysOne-Regular.ttf',fontsize-4,'SLOT 1',(255,255,255),1070,115)
-                elif len (finallist1) == 14:
-                    textbox(self.screen,'DaysOne-Regular.ttf',fontsize-4,finallist1[13],(255,255,255),1010,115)
-                if len (finallist2) == 13:
+                elif len (finallist1) == 12:
+                    textbox(self.screen,'DaysOne-Regular.ttf',fontsize-4,finallist1[11],(255,255,255),1010,115)
+                if len (finallist2) == 11:
                     textbox(self.screen,'DaysOne-Regular.ttf',fontsize-4,'SLOT 2',(255,255,255),1070,155)
-                elif len (finallist2) == 14:
-                    textbox(self.screen,'DaysOne-Regular.ttf',fontsize-4,finallist2[13],(255,255,255),1010,155)
-                if len (finallist3) == 13:
+                elif len (finallist2) == 12:
+                    textbox(self.screen,'DaysOne-Regular.ttf',fontsize-4,finallist2[11],(255,255,255),1010,155)
+                if len (finallist3) == 11:
                     textbox(self.screen,'DaysOne-Regular.ttf',fontsize-4,'SLOT 3',(255,255,255),1070,195)
-                elif len (finallist3) == 14:
-                    textbox(self.screen,'DaysOne-Regular.ttf',fontsize-4,finallist3[13],(255,255,255),1010,195)
-                if len (finallist4) == 13:
+                elif len (finallist3) == 12:
+                    textbox(self.screen,'DaysOne-Regular.ttf',fontsize-4,finallist3[11],(255,255,255),1010,195)
+                if len (finallist4) == 11:
                     textbox(self.screen,'DaysOne-Regular.ttf',fontsize-4,'SLOT 4',(255,255,255),1070,235)
-                elif len (finallist4) == 14:
-                    textbox(self.screen,'DaysOne-Regular.ttf',fontsize-4,finallist4[13],(255,255,255),1010,235)
-                if len (finallist5) == 13:
+                elif len (finallist4) == 12:
+                    textbox(self.screen,'DaysOne-Regular.ttf',fontsize-4,finallist4[11],(255,255,255),1010,235)
+                if len (finallist5) == 11:
                     textbox(self.screen,'DaysOne-Regular.ttf',fontsize-4,'SLOT 5',(255,255,255),1070,275)
-                elif len (finallist5) == 14:
-                    textbox(self.screen,'DaysOne-Regular.ttf',fontsize-4,finallist5[13],(255,255,255),1010,275)
-                if len (finallist6) == 13:
+                elif len (finallist5) == 12:
+                    textbox(self.screen,'DaysOne-Regular.ttf',fontsize-4,finallist5[11],(255,255,255),1010,275)
+                if len (finallist6) == 11:
                     textbox(self.screen,'DaysOne-Regular.ttf',fontsize-4,'SLOT 6',(255,255,255),1070,315)
-                elif len (finallist6) == 14:
-                    textbox(self.screen,'DaysOne-Regular.ttf',fontsize-4,finallist6[13],(255,255,255),1010,315)
-                if len (finallist7) == 13:
+                elif len (finallist6) == 12:
+                    textbox(self.screen,'DaysOne-Regular.ttf',fontsize-4,finallist6[11],(255,255,255),1010,315)
+                if len (finallist7) == 11:
                     textbox(self.screen,'DaysOne-Regular.ttf',fontsize-4,'SLOT 7',(255,255,255),1070,355)
-                elif len (finallist7) == 14:
-                    textbox(self.screen,'DaysOne-Regular.ttf',fontsize-4,finallist7[13],(255,255,255),1010,355)
-                if len (finallist8) == 13:
+                elif len (finallist7) == 12:
+                    textbox(self.screen,'DaysOne-Regular.ttf',fontsize-4,finallist7[11],(255,255,255),1010,355)
+                if len (finallist8) == 11:
                     textbox(self.screen,'DaysOne-Regular.ttf',fontsize-4,'SLOT 8',(255,255,255),1070,395)
-                elif len (finallist8) == 14:
-                    textbox(self.screen,'DaysOne-Regular.ttf',fontsize-4,finallist8[13],(255,255,255),1010,395)
-                if len (finallist9) == 13:
+                elif len (finallist8) == 12:
+                    textbox(self.screen,'DaysOne-Regular.ttf',fontsize-4,finallist8[11],(255,255,255),1010,395)
+                if len (finallist9) == 11:
                     textbox(self.screen,'DaysOne-Regular.ttf',fontsize-4,'SLOT 9',(255,255,255),1070,435)
-                elif len (finallist9) == 14:
-                    textbox(self.screen,'DaysOne-Regular.ttf',fontsize-4,finallist9[13],(255,255,255),1010,435)
-                if len (finallist10) == 13:
+                elif len (finallist9) == 12:
+                    textbox(self.screen,'DaysOne-Regular.ttf',fontsize-4,finallist9[11],(255,255,255),1010,435)
+                if len (finallist10) == 11:
                     textbox(self.screen,'DaysOne-Regular.ttf',fontsize-4,'SLOT 10',(255,255,255),1070,475)
-                elif len (finallist10) == 14:
-                    textbox(self.screen,'DaysOne-Regular.ttf',fontsize-4,finallist10[13],(255,255,255),1010,475)
+                elif len (finallist10) == 12:
+                    textbox(self.screen,'DaysOne-Regular.ttf',fontsize-4,finallist10[11],(255,255,255),1010,475)
             for decision in self.choices:
                 if decision[0] == self.line_no and len(decision[1]) == 2:
                     draw_button(self.screen,400,100,500,80,color2 = (3,0,70))
@@ -1282,8 +1202,6 @@ def main():
     global shop_access
     global lanaya_chosen
     global yorjan_chosen
-    global asterios_killed
-    global final_yorjan_chosen
     pygame.init()
     pygame.font.init()
     save_file_list = ['savefile1.txt','savefile2.txt','savefile3.txt','savefile4.txt','savefile5.txt','savefile6.txt','savefile7.txt','savefile8.txt','savefile9.txt','savefile10.txt']
@@ -1418,19 +1336,11 @@ def main():
             scene6.ins_sprite('Yorjan Talking.png.png',16,16,380,60,690,680)
             scene6.ins_sprite('Lanaya Talking.png.png',18,18,400,80,552,560)
             scene6.run_scene('Futura Book font.ttf',23)
-        elif what_scene == '8':
+        elif what_scene == '8': #insert sprites starting here
             scene7 = scene()
             scene7.bg_img('underground_by_jordangrimmer_d9uj0ml-pre.jpg')
             scene7.ins_audio('Violet Evergarden OST - Rust.mp3')
             scene7.ins_script('scene7.txt')
-            scene7.ins_sprite('Yorjan Normal.png.png',2,3,500,80,690,680)
-            scene7.ins_sprite('Lanaya Normal.png.png',3,3,50,60,522,560)
-            scene7.ins_sprite('Lanaya Talking.png.png',6,7,380,60,522,560)
-            scene7.ins_sprite('Lanaya Sad.png.png',8,8,380,60,522,560)
-            scene7.ins_sprite('Yorjan Talking.png.png',9,10,380,80,690,680)
-            scene7.ins_sprite('Lanaya Talking.png.png',12,12,50,60,552,560)
-            scene7.ins_sprite('Yorjan Talking.png.png',13,14,500,80,690,680)
-            scene7.ins_sprite('Lanaya Talking.png.png',13,14,50,60,552,560)
             scene7.ins_decision(14,['Look around for possible items','Leave right away'],35,[400,520])
             scene7.run_scene('Futura Book font.ttf',23)
         elif what_scene == '9a':
@@ -1439,19 +1349,6 @@ def main():
             scene7a.bg_img('underground_by_jordangrimmer_d9uj0ml-pre.jpg')
             scene7a.ins_audio('Violet Evergarden OST - Rust.mp3')
             scene7a.ins_script('scene7a.txt')
-            scene7a.ins_sprite('Lanaya Normal.png.png',1,1,50,60,552,560)
-            scene7a.ins_sprite('Yorjan Normal.png.png',1,1,500,80,690,680)
-            scene7a.ins_sprite('Lanaya Happy.png.png',2,3,50,60,552,560)
-            scene7a.ins_sprite('Yorjan Sad.png.png',2,3,500,80,690,680)
-            scene7a.ins_sprite('Yorjan Talking.png.png',4,4,500,80,690,680)
-            scene7a.ins_sprite('Lanaya Talking.png.png',5,5,50,60,552,560)
-            scene7a.ins_sprite('Yorjan Talking.png.png',11,11,380,80,690,680)
-            scene7a.ins_sprite('Lanaya Talking.png.png',13,13,380,60,552,560)
-            scene7a.ins_sprite('Lanaya Normal.png.png',14,15,380,60,552,560)
-            scene7a.ins_sprite('Lanaya Normal.png.png',16,16,380,60,552,560)
-            scene7a.ins_sprite('Lanaya Angry.png.png',18,18,380,60,552,560)
-            scene7a.ins_sprite('Yorjan Talking.png.png',21,21,380,80,690,680)
-            scene7a.ins_sprite('Lanaya Sad.png.png',23,23,380,60,552,560)
             scene7a.run_scene('Futura Book font.ttf',23)
         elif what_scene == '9b':
             yorjan_chosen.append('7')
@@ -1459,30 +1356,21 @@ def main():
             scene7b.bg_img('underground_by_jordangrimmer_d9uj0ml-pre.jpg')
             scene7b.ins_audio('Violet Evergarden OST - Rust.mp3')
             scene7b.ins_script('scene7b.txt')
-            scene7b.ins_sprite('Yorjan Happy.png.png',1,1,500,80,690,680)
-            scene7b.ins_sprite('Lanaya Sad.png.png',1,1,50,60,552,560)
-            scene7b.ins_sprite('Lanaya Angry.png.png',3,3,380,60,552,560)
-            scene7b.ins_sprite('Yorjan Talking.png.png',5,7,500,80,690,680)
-            scene7b.ins_sprite('Lanaya Angry.png.png',6,7,50,60,552,560)
             scene7b.run_scene('Futura Book font.ttf',23)
         elif what_scene == '10':
             scene8 = scene()
             scene8.bg_img('Mystery_Sanctuary.jpg')
             scene8.ins_audio('INTENSE SUSPENSE BACKGROUND MUSIC.mp3')
             scene8.ins_script('scene8.txt')
+            scene8.ins_sprite('Yorjan Angry.png.png',7,7,600,60,690,680)
+            scene8.ins_sprite('Yorjan Talking.png.png',13,13,600,60,690,680)
+            scene8.ins_sprite('')
             scene8.run_scene('Futura Book font.ttf',23)
         elif what_scene == '11':
             scene9 = scene()
             scene9.bg_img('Mystery_Sanctuary.jpg')
             scene9.ins_audio('Made in Abyss OST - Tomorrow.mp3')
             scene9.ins_script('scene9.txt')
-            scene9.ins_sprite('Lanaya Talking.png.png',3,3,500,60,552,560)
-            scene9.ins_sprite('Lanaya Angry.png.png',7,8,50,60,552,560)
-            scene9.ins_sprite('Yorjan Talking.png.png',8,9,500,80,690,680)
-            scene9.ins_sprite('Lanaya Talking.png.png',9,9,50,60,552,560)
-            scene9.ins_sprite('Lanaya Talking.png.png',17,22,50,60,552,560)
-            scene9.ins_sprite('Yorjan Talking.png.png',18,22,500,80,690,680)
-            scene9.ins_sprite('Lanaya Talking.png.png',24,24,380,60,552,560)
             scene9.ins_decision(24,['Left Path','Right Path'],35,[540,538])
             scene9.run_scene('Futura Book font.ttf',23)
         elif what_scene == '12a':
@@ -1491,11 +1379,6 @@ def main():
             scene9a.bg_img('Mystery_Sanctuary.jpg')
             scene9a.ins_audio('Made in Abyss OST - Tomorrow (メイドインアビス OST).mp3')
             scene9a.ins_script('scene9a.txt')
-            scene9a.ins_sprite('Yorjan Sad.png.png',2,2,380,80,690,680)
-            scene9a.ins_sprite('Yorjan Talking.png.png',7,7,380,80,690,680)
-            scene9a.ins_sprite('Yorjan Talking.png.png',11,13,380,80,690,680)
-            scene9a.ins_sprite('Lanaya Talking.png.png',17,17,380,60,552,560)
-            scene9a.ins_decision(24,['Left Path','Right Path'],35,[540,538])
             scene9a.run_scene('Futura Book font.ttf',23)
         elif what_scene == '12b':
             yorjan_chosen+=1
@@ -1503,18 +1386,15 @@ def main():
             scene9a.bg_img('Mystery_Sanctuary.jpg')
             scene9a.ins_audio('Made in Abyss OST - Tomorrow.mp3')
             scene9a.ins_script('scene9b.txt')
-            scene9a.ins_sprite('Lanaya Angry.png.png',2,2,380,60,552,560)
-            scene9a.ins_sprite('Lanaya Normal.png.png',5,5,380,60,552,560)
-            scene9a.ins_sprite('Yorjan Talking.png.png',11,11,380,80,690,680)
-            scene9a.ins_sprite('Yorjan Talking.png.png',11,13,380,80,690,680)
-            scene9a.ins_sprite('Lanaya Angry.png.png',15,15,380,60,552,560)
-            scene9a.ins_sprite('Lanaya Sad.png.png',17,17,380,60,552,560)
             scene9a.run_scene('Futura Book font.ttf',23)
         elif what_scene == '13':
             scene10 = scene()
             scene10.bg_img('Mystery_Sanctuary.jpg')
             scene10.ins_audio('Made in Abyss OST - Tomorrow.mp3')
             scene10.ins_script('scene10.txt')
+            scene10.ins_sprite('Yorjan Talking.png.png',3,3,600,60,690,680)
+            scene10.ins_sprite('Yorjan Talking.png.png',7,7,600,60,690,680)
+            scene10.ins_sprite('Lanaya Talking.png.png',8,8,400,80,552,560)
             scene10.ins_decision(9,['Attack the Monster','Ignore and walk away'],35,[510,510])
             scene10.run_scene('Futura Book font.ttf',23)
         elif what_scene == '14a':
@@ -1524,50 +1404,84 @@ def main():
             if lanaya_chosen>0:
                 if dagger_purchased:
                     scene10a.ins_script('scene10aa.txt')
+                    scene10a.ins_sprite('Lanaya Normal.png.png',5,5,400,80,552,560)
+                    scene10a.ins_sprite('Yorjan Sad.png.png',6,6,600,60,690,680)
+                    scene10a.ins_sprite('Yorjan Talking.png.png',13,13,600,60,690,680)
+                    scene10a.ins_sprite('Lanaya Talking.png.png',14,14,400,80,552,560)
+                    scene10a.ins_sprite('Lanaya Talking.png.png',21,21,400,80,552,560)
+                    scene10a.ins_sprite('Yorjan Sad.png.png',23,23,600,60,690,680)
+                    scene10a.ins_sprite('Lanaya Happy.png.png',26,26,50,80,552,560)
+                    scene10a.ins_sprite('Lanaya Happy.png.png',27,27,50,80,552,560)
+                    scene10a.ins_sprite('Yorjan Angry.png.png',27,27,600,60,690,680)
+                    scene10a.ins_sprite('Lanaya Happy.png.png',28,28,400,80,552,560)
+                    scene10a.ins_sprite('Yorjan Talking.png.png',30,30,600,60,690,680)
+
                 else:
                     scene10a.ins_script('scene10ab.txt')
+                    scene10a.ins_sprite('Lanaya Normal.png.png',5,5,400,80,552,560)
+                    scene10a.ins_sprite('Yorjan Sad.png.png',6,6,600,60,690,680)
+                    scene10a.ins_sprite('Yorjan Talking.png.png',13,13,600,60,690,680)
+                    scene10a.ins_sprite('Lanaya Talking.png.png',14,14,400,80,552,560)
+                    scene10a.ins_sprite('Lanaya Happy.png.png',21,21,400,80,552,560)
+                    scene10a.ins_sprite('Yorjan Sad.png.png',23,23,600,60,690,680)
+                    scene10a.ins_sprite('Lanaya Happy.png.png', 26, 26, 50, 80, 552, 560)
+                    scene10a.ins_sprite('Lanaya Happy.png.png', 27, 27, 50, 80, 552, 560)
+                    scene10a.ins_sprite('Yorjan Angry.png.png', 27, 27, 600, 60, 690, 680)
+                    scene10a.ins_sprite('Lanaya Happy.png.png', 28, 28, 400, 80, 552, 560)
+                    scene10a.ins_sprite('Yorjan Talking.png.png',30,30,600,60,690,680)
+
             else:
                 if dagger_purchased:
                     scene10a.ins_script('scene10ac.txt')
+                    scene10a.ins_sprite('Lanaya Angry.png.png',0,0,400,80,552,560)
+                    scene10a.ins_sprite('Lanaya Angry.png.png',1,1,400,80,552,560)
+                    scene10a.ins_sprite('Yorjan Angry.png.png', 1, 1, 600, 60, 690, 680)
+                    scene10a.ins_sprite('Yorjan Talking.png.png',3,3,600,60,690,680)
+                    scene10a.ins_sprite('Yorjan Talking.png.png',10,10,600,60,690,680)
+                    scene10a.ins_sprite('Lanaya Talking.png.png',11,11,400,80,552,560)
+                    scene10a.ins_sprite('Lanaya Angry.png.png',18,18,400,80,552,560)
+                    scene10a.ins_sprite('Yorjan Talking.png.png',19,19,600,60,690,680)
+                    scene10a.ins_sprite('Yorjan Sad.png.png',21,21,600,60,690,680)
+                    scene10a.ins_sprite('Lanaya Sad.png.png',24,24,400,80,552,560)
+                    scene10a.ins_sprite('Yorjan Angry.png.png', 25, 25, 600, 60, 690, 680)
+                    scene10a.ins_sprite('Yorjan Talking.png.png',27,27,600,60,690,680)
+
+
+
+
                 else:
                     scene10a.ins_script('scene10ad.txt')
+                    scene10a.ins_sprite('Lanaya Angry.png.png',0,0,400,80,552,560)
+                    scene10a.ins_sprite('Lanaya Angry.png.png',1,1,400,80,552,560)
+                    scene10a.ins_sprite('Yorjan Angry.png.png', 1, 1, 600, 60, 690, 680)
+                    scene10a.ins_sprite('Yorjan Talking.png.png',3,3,600,60,690,680)
+                    scene10a.ins_sprite('Yorjan Talking.png.png',10,10,600,60,690,680)
+                    scene10a.ins_sprite('Lanaya Talking.png.png',11,11,400,80,552,560)
+                    scene10a.ins_sprite('Lanaya Angry.png.png',18,18,400,80,552,560)
+                    scene10a.ins_sprite('Yorjan Talking.png.png',19,19,600,60,690,680)
+                    scene10a.ins_sprite('Yorjan Sad.png.png',21,21,600,60,690,680)
+                    scene10a.ins_sprite('Lanaya Sad.png.png',24,24,400,80,552,560)
+                    scene10a.ins_sprite('Yorjan Angry.png.png', 25, 25, 600, 60, 690, 680)
+                    scene10a.ins_sprite('Yorjan Talking.png.png',27,27,600,60,690,680)
             scene10a.run_scene('Futura Book font.ttf',23)
+
         elif what_scene == '14b':
             scene10b = scene()
             scene10b.bg_img('Mystery_Sanctuary.jpg')
             scene10b.ins_script('scene10b.txt')
             scene10b.ins_audio('Made in Abyss OST - Tomorrow.mp3')
+            scene10b.ins_sprite('Yorjan Talking.png.png', 1, 1, 600, 60, 690, 680)
+            scene10b.ins_sprite('Lanaya Talking.png.png', 3, 3, 400, 80, 552, 560)
+            scene10b.ins_sprite('Lanaya Talking.png.png', 3, 3, 400, 80, 552, 560)
             scene10b.run_scene('Futura Book font.ttf',23)
+
         elif what_scene == '15':
             scene11 = scene()
             scene11.bg_img('Mystery_Sanctuary.jpg')
             if lanaya_chosen>0:    
                 scene11.ins_script('scene11a.txt')
-                scene11.ins_sprite('Lanaya Talking.png.png',2,2,380,60,552,560)
-                scene11.ins_sprite('Lanaya Talking.png.png',5,6,50,60,552,560)
-                scene11.ins_sprite('Yorjan Talking.png.png',6,6,500,80,690,680)
-                scene11.ins_sprite('Yorjan Talking.png.png',14,16,500,80,690,680)
-                scene11.ins_sprite('Lanaya Angry.png.png',16,16,50,60,552,560)
-                scene11.ins_sprite('Yorjan Talking.png.png',21,21,380,80,690,680)
-                scene11.ins_sprite('Lanaya Talking.png.png',26,26,380,60,552,560)
-                scene11.ins_sprite('Lanaya Talking.png.png',29,30,50,60,552,560)
-                scene11.ins_sprite('Lanaya Normal.png.png',31,32,50,60,552,560)
-                scene11.ins_sprite('Yorjan Talking.png.png',31,32,500,80,690,680)
-                scene11.ins_sprite('Yorjan Talking.png.png',37,37,380,80,690,680)
             else:
                 scene11.ins_script('scene11b.txt')
-                scene11.ins_sprite('Lanaya Talking.png.png',2,2,380,60,552,560)
-                scene11.ins_sprite('Lanaya Talking.png.png',5,6,50,60,552,560)
-                scene11.ins_sprite('Yorjan Talking.png.png',6,6,500,80,690,680)
-                scene11.ins_sprite('Yorjan Talking.png.png',14,16,500,80,690,680)
-                scene11.ins_sprite('Lanaya Angry.png.png',16,16,50,60,552,560)
-                scene11.ins_sprite('Yorjan Talking.png.png',21,21,380,80,690,680)
-                scene11.ins_sprite('Lanaya Talking.png.png',26,26,380,60,552,560)
-                scene11.ins_sprite('Lanaya Angry.png.png',28,28,380,60,552,560)
-                scene11.ins_sprite('Lanaya Angry.png.png',30,30,380,60,552,560)
-                scene11.ins_sprite('Yorjan Angry.png.png',31,31,380,80,690,680)
-                scene11.ins_sprite('Yorjan Angry.png.png',33,33,380,80,690,680)
-                scene11.ins_sprite('Yorjan Talking.png.png',38,38,380,80,690,680)
             scene11.ins_audio('Made in Abyss OST - Tomorrow.mp3')
             scene11.run_scene('Futura Book font.ttf',23)
         elif what_scene == '16':
@@ -1575,29 +1489,60 @@ def main():
             scene12.bg_img('Mystery_Sanctuary.jpg')
             if doll_purchased:    
                 scene12.ins_script('scene12a.txt')
+                scene12.ins_sprite('Claude Talking.png.png',2,2,320,60,750,660)
+                scene12.ins_sprite('Yorjan Talking.png.png', 3, 3, 600, 60, 690, 680)
+                scene12.ins_sprite('Lanaya Happy.png.png', 5, 5, 400, 80, 552, 560)
+                scene12.ins_sprite('Claude Talking.png.png',7,7,320,60,750,660)
+                scene12.ins_sprite('Claude Talking.png.png',9,9,320,60,750,660)
+                scene12.ins_sprite('Claude Talking.png.png',11,11,320,60,750,660)
+                scene12.ins_sprite('Lanaya Sad.png.png', 12, 12, 50, 80, 552, 560)
+                scene12.ins_sprite('Lanaya Sad.png.png', 13, 13, 50, 80, 552, 560)
+                scene12.ins_sprite('Yorjan Normal.png.png', 13, 13, 600, 60, 690, 680)
+                scene12.ins_sprite('Yorjan Angry.png.png', 16, 16, 600, 60, 690, 680)
+                scene12.ins_sprite('Claude Talking.png.png',23,23,320,60,750,660)
                 scene12.ins_decision(25,['Follow the Chupacabras','Listen to Claude'],30,[510,520])
+
             else:
                 scene12.ins_script('scene12b.txt')
                 what_scene = str(int(what_scene)+1)
-            scene12.ins_audio('Made in Abyss OST - Tomorrow.mp3')
-            scene12.run_scene('Futura Book font.ttf',23)
+                scene12.ins_audio('Made in Abyss OST - Tomorrow.mp3')
+                scene12.ins_sprite('Claude Talking.png.png',2,2,320,60,750,660)
+                scene12.ins_sprite('Yorjan Talking.png.png', 3, 3, 600, 60, 690, 680)
+                scene12.ins_sprite('Lanaya Happy.png.png', 5, 5, 400, 80, 552, 560)
+                scene12.ins_sprite('Claude Talking.png.png',7,7,320,60,750,660)
+                scene12.ins_sprite('Claude Talking.png.png',9,9,320,60,750,660)
+                scene12.ins_sprite('Claude Talking.png.png',11,11,320,60,750,660)
+                scene12.ins_sprite('Lanaya Sad.png.png', 12, 12, 50, 80, 552, 560)
+                scene12.ins_sprite('Lanaya Sad.png.png', 13, 13, 50, 80, 552, 560)
+                scene12.ins_sprite('Yorjan Normal.png.png', 13, 13, 600, 60, 690, 680)
+                scene12.ins_sprite('Yorjan Angry.png.png', 16, 16, 600, 60, 690, 680)
+                scene12.ins_sprite('Claude Talking.png.png',23,23,320,60,750,660)
+                scene12.ins_sprite('Yorjan Sad.png.png', 29, 29, 600, 60, 690, 680)
+                scene12.ins_sprite('Lanaya Normal.png.png',30,30, 400, 80, 552, 560)
+                scene12.run_scene('Futura Book font.ttf',23)
+
         elif what_scene == '17a':
             scene12a = scene()
             scene12a.bg_img('Mystery_Sanctuary.jpg')
             scene12a.ins_script('scene12aa.txt')
             scene12a.ins_audio('Made in Abyss OST - Tomorrow.mp3')
+            scene12a.ins_sprite('Claude Talking.png.png', 2, 2, 320, 60, 750, 660)
+            scene12a.ins_sprite('Yorjan Sad.png.png', 6, 6, 600, 60, 690, 680)
+            scene12a.ins_sprite('Lanaya Normal.png.png', 7, 7, 400, 80, 552, 560)
             scene12a.run_scene('Futura Book font.ttf',23)
+
         elif what_scene == '17b':
             scene12b = scene()
             scene12b.bg_img('Mystery_Sanctuary.jpg')
             scene12b.ins_script('scene12ab.txt')
             scene12b.ins_audio('Made in Abyss OST - Tomorrow.mp3')
+            scene12b.ins_sprite('Yorjan Sad.png.png', 6, 6, 600, 60, 690, 680)
+            scene12b.ins_sprite('Lanaya Normal.png.png', 7, 7, 400, 80, 552, 560)
             scene12b.run_scene('Futura Book font.ttf',23)
         elif what_scene == '18':
             scene13 = scene()
             scene13.bg_img('Mystery_Sanctuary.jpg')
             scene13.ins_script('scene13.txt')
-            scene13.ins_sprite('Lanaya Sad.png.png',2,2,380,60,552,560)
             scene13.ins_decision(5,["Call Lanaya's attention","Attack it myself"],30,[500,510])
             scene13.ins_audio('Made in Abyss OST - Tomorrow.mp3')
             scene13.run_scene('Futura Book font.ttf',23)
@@ -1607,16 +1552,8 @@ def main():
             scene13a.bg_img('Mystery_Sanctuary.jpg')
             if lanaya_chosen>0:
                 scene13a.ins_script('scene13aa.txt')
-                scene13a.ins_sprite('Lanaya Happy.png.png',3,3,380,60,552,560)
-                scene13a.ins_sprite('Yorjan Talking.png.png',4,4,380,80,690,680)
-                scene13a.ins_sprite('Lanaya Talking.png.png',10,10,380,60,552,560)
-                scene13a.ins_sprite('Lanaya Talking.png.png',12,12,380,60,552,560)
-                scene13a.ins_sprite('Lanaya Talking.png.png',16,16,380,60,552,560)
-                scene13a.ins_sprite('Lanaya Talking.png.png',19,19,380,60,552,560)
             else:
                 scene13a.ins_script('scene13ab.txt')
-                scene13a.ins_sprite('Lanaya Happy.png.png',3,3,380,60,552,560)
-                scene13a.ins_sprite('Yorjan Talking.png.png',4,4,380,80,690,680)
             scene13a.ins_audio('Made in Abyss OST - Tomorrow.mp3')
             scene13a.run_scene('Futura Book font.ttf',23)
         elif what_scene == '19b':
@@ -1625,32 +1562,65 @@ def main():
             scene13b.bg_img('Mystery_Sanctuary.jpg')
             if lanaya_chosen>0:
                 scene13b.ins_script('scene13ac.txt')
-                scene13b.ins_sprite('Lanaya Angry.png.png',2,2,380,60,552,560)
-                scene13b.ins_sprite('Yorjan Talking.png.png',4,4,380,80,690,680)
-                scene13b.ins_sprite('Lanaya Talking.png.png',10,10,380,60,552,560)
-                scene13b.ins_sprite('Lanaya Talking.png.png',12,12,380,60,552,560)
             else:
                 scene13b.ins_script('scene13ad.txt')
-                scene13b.ins_sprite('Lanaya Angry.png.png',2,2,380,60,552,560)
-                scene13b.ins_sprite('Yorjan Talking.png.png',4,4,380,80,690,680)
-                scene13b.ins_sprite('Lanaya Angry.png.png',11,11,380,60,552,560)
             scene13b.ins_audio('Made in Abyss OST - Tomorrow.mp3')
             scene13b.run_scene('Futura Book font.ttf',23)
         elif what_scene == '20':
             scene14 = scene()
             scene14.bg_img('Mystery_Sanctuary.jpg')
             scene14.ins_script('scene14.txt')
+            scene14.ins_sprite('Yorjan Talking.png.png', 1, 1, 600, 60, 690, 680)
+            scene14.ins_sprite('Lanaya Sad.png.png', 2, 2, 400, 80, 552, 560)
+            scene14.ins_sprite('Yorjan Sad.png.png', 4, 4, 600, 60, 690, 680)
+            scene14.ins_sprite('Lanaya Talking.png.png', 6, 6, 400, 80, 552, 560)
+            scene14.ins_sprite('Yorjan Talking.png.png', 14, 14, 600, 60, 690, 680)
+            scene14.ins_sprite('Yorjan Talking.png.png', 15, 15, 600, 60, 690, 680)
+            scene14.ins_sprite('Lanaya Sad.png.png', 15, 15, 400, 80, 552, 560)
+            scene14.ins_sprite('Lanaya Talking.png.png', 18, 18, 50, 80, 552, 560)
+            scene14.ins_sprite('Lanaya Talking.png.png', 19, 19, 50, 80, 552, 560)
+            scene14.ins_sprite('Yorjan Talking.png.png', 19, 19, 600, 60, 690, 680)
+            scene14.ins_sprite('Lanaya Talking.png.png', 20, 20, 50, 80, 552, 560)
+            scene14.ins_sprite('Yorjan Talking.png.png', 20, 20, 600, 60, 690, 680)
+            scene14.ins_sprite('Yorjan Talking.png.png', 21, 21, 600, 60, 690, 680)
+            scene14.ins_sprite('Lanaya Talking.png.png', 21, 21, 50, 80, 552, 560)
+            scene14.ins_sprite('Lanaya Talking.png.png', 22, 22, 50, 80, 552, 560)
+            scene14.ins_sprite('Yorjan Talking.png.png', 22, 22, 600, 60, 690, 680)
+
             scene14.ins_decision(24,['Go with Yorjan (Left)','Go with Lanaya (Right)'],30,[490,490])
             scene14.ins_audio('Made in Abyss OST - Tomorrow.mp3')
             scene14.run_scene('Futura Book font.ttf',23)
+
         elif what_scene == '21a':
             scene14a = scene()
             yorjan_chosen+=1
             scene14a.bg_img('Mystery_Sanctuary.jpg')
             if lanaya_chosen>0:
                 scene14a.ins_script('scene14aa.txt')
+                scene14a.ins_sprite('Yorjan Normal.png.png', 2, 2, 600, 60, 690, 680)
+                scene14a.ins_sprite('Lanaya Angry.png.png', 3, 3, 50, 80, 552, 560)
+                scene14a.ins_sprite('Lanaya Normal.png.png', 8, 8, 400, 80, 552, 560)
+                scene14a.ins_sprite('Yorjan Talking.png.png', 10, 10, 600, 60, 690, 680)
+                scene14a.ins_sprite('Yorjan Talking.png.png', 14, 14, 600, 60, 690, 680)
+                scene14a.ins_sprite('Yorjan Happy.png.png', 16, 16, 600, 60, 690, 680)
+                scene14a.ins_sprite('Yorjan Talking.png.png',18, 18, 600, 60, 690, 680)
+                scene14a.ins_sprite('Yorjan Happy.png.png',20, 20, 600, 60, 690, 680)
+
+
             else:
                 scene14a.ins_script('scene14ab.txt')
+                scene14a.ins_sprite('Yorjan Talking.png.png', 2, 2, 600, 60, 690, 680)
+                scene14a.ins_sprite('Yorjan Normal.png.png', 3, 3, 600, 60, 690, 680)
+                scene14a.ins_sprite('Lanaya Angry.png.png', 3, 3, 50, 80, 552, 560)
+                scene14a.ins_sprite('Lanaya Angry.png.png', 5, 5, 400, 80, 552, 560)
+                scene14a.ins_sprite('Lanaya Angry.png.png', 7, 7, 400, 80, 552, 560)
+                scene14a.ins_sprite('Yorjan Talking.png.png', 13, 13, 600, 60, 690, 680)
+                scene14a.ins_sprite('Lanaya Talking.png.png', 15, 15, 400, 80, 552, 560)
+                scene14a.ins_sprite('Yorjan Talking.png.png', 19, 19, 600, 60, 690, 680)
+                scene14a.ins_sprite('Yorjan Happy.png.png',21, 21, 600, 60, 690, 680)
+                scene14a.ins_sprite('Yorjan Talking.png.png',23, 23, 600, 60, 690, 680)
+                scene14a.ins_sprite('Yorjan Happy.png.png',25, 25, 600, 60, 690, 680)
+
             scene14a.ins_audio('Made in Abyss OST - Tomorrow.mp3')
             scene14a.run_scene('Futura Book font.ttf',23)
         elif what_scene == '21b':
@@ -1659,8 +1629,40 @@ def main():
             scene14b.bg_img('Mystery_Sanctuary.jpg')
             if lanaya_chosen>=2:
                 scene14b.ins_script('scene14ac.txt')
+                scene14b.ins_sprite('Lanaya Talking.png.png', 2, 2, 400, 80, 552, 560)
+                scene14b.ins_sprite('Yorjan Talking.png.png', 3, 3, 600, 60, 690, 680)
+                scene14b.ins_sprite('Lanaya Talking.png.png', 5, 5, 400, 80, 552, 560)
+                scene14b.ins_sprite('Lanaya Talking.png.png', 9, 9, 400, 80, 552, 560)
+                scene14b.ins_sprite('Lanaya Happy.png.png', 10, 10, 50, 80, 552, 560)
+                scene14b.ins_sprite('Yorjan Happy.png.png', 10, 10, 600, 60, 690, 680)
+                scene14b.ins_sprite('Lanaya Talking.png.png', 11, 11, 50, 80, 552, 560)
+                scene14b.ins_sprite('Lanaya Talking.png.png', 13, 13, 400, 80, 552, 560)
+                scene14b.ins_sprite('Lanaya Talking.png.png', 14, 14, 400, 80, 552, 560)
+                scene14b.ins_sprite('Yorjan Talking.png.png', 18, 18, 600, 60, 690, 680)
+                scene14b.ins_sprite('Yorjan Talking.png.png', 20, 20, 600, 60, 690, 680)
+                scene14b.ins_sprite('Lanaya Happy.png.png', 22, 22, 400, 80, 552, 560)
+                scene14b.ins_sprite('Yorjan Talking.png.png', 24, 24, 600, 60, 690, 680)
+                scene14b.ins_sprite('Lanaya Happy.png.png', 26, 26, 400, 80, 552, 560)
+                scene14b.ins_sprite('Yorjan Happy.png.png', 27, 27, 600, 60, 690, 680)
+
             else:
                 scene14b.ins_script('scene14ad.txt')
+                scene14b.ins_sprite('Lanaya Talking.png.png', 2, 2, 400, 80, 552, 560)
+                scene14b.ins_sprite('Yorjan Talking.png.png', 3, 3, 600, 60, 690, 680)
+                ene14b.ins_sprite('Lanaya Talking.png.png', 5, 5, 400, 80, 552, 560)
+                scene14b.ins_sprite('Lanaya Talking.png.png', 9, 9, 400, 80, 552, 560)
+                scene14b.ins_sprite('Lanaya Happy.png.png', 10, 10, 50, 80, 552, 560)
+                scene14b.ins_sprite('Yorjan Happy.png.png', 10, 10, 600, 60, 690, 680)
+                scene14b.ins_sprite('Lanaya Talking.png.png', 11, 11, 50, 80, 552, 560)
+                scene14b.ins_sprite('Lanaya Talking.png.png', 13, 13, 400, 80, 552, 560)
+                scene14b.ins_sprite('Lanaya Normal.png.png', 15, 15, 400, 80, 552, 560)
+                scene14b.ins_sprite('Yorjan Talking.png.png', 20, 20, 600, 60, 690, 680)
+                scene14b.ins_sprite('Yorjan Talking.png.png', 22, 22, 600, 60, 690, 680)
+                scene14b.ins_sprite('Lanaya Happy.png.png', 24, 24, 400, 80, 552, 560)
+                scene14b.ins_sprite('Yorjan Talking.png.png', 26, 26, 600, 60, 690, 680)
+                scene14b.ins_sprite('Lanaya Happy.png.png', 28, 28, 400, 80, 552, 560)
+                scene14b.ins_sprite('Yorjan Happy.png.png', 29, 29, 600, 60, 690, 680)
+
             scene14b.ins_audio('Made in Abyss OST - Tomorrow.mp3')
             scene14b.run_scene('Futura Book font.ttf',23)
         elif what_scene == '22':
@@ -1669,26 +1671,8 @@ def main():
             if rope_purchased:
                 rope_purchased = str(int(rope_purchased)-1)
                 scene15.ins_script('scene15a.txt')
-                scene15.ins_sprite('asterios.png',5,5,380,80,450,760)
-                scene15.ins_sprite('asterios.png',7,8,380,80,450,760)
-                scene15.ins_sprite('asterios.png',15,15,380,80,450,760)
-                scene15.ins_sprite('asterios.png',17,17,380,80,450,760)
-                scene15.ins_sprite('asterios.png',20,20,380,80,450,760)
-                scene15.ins_sprite('asterios.png',22,22,380,80,450,760)
-                scene15.ins_sprite('Yorjan Talking.png.png',28,33,500,80,690,680)
-                scene15.ins_sprite('Lanaya Angry.png.png',29,30,50,60,552,560)
-                scene15.ins_sprite('Lanaya Talking.png.png',31,33,50,60,552,560)
             else:
                 scene15.ins_script('scene15b.txt')
-                scene15.ins_sprite('asterios.png',5,5,380,80,450,760)
-                scene15.ins_sprite('asterios.png',7,8,380,80,450,760)
-                scene15.ins_sprite('asterios.png',15,15,380,80,450,760)
-                scene15.ins_sprite('asterios.png',17,17,380,80,450,760)
-                scene15.ins_sprite('asterios.png',20,20,380,80,450,760)
-                scene15.ins_sprite('asterios.png',22,22,380,80,450,760)
-                scene15.ins_sprite('Yorjan Talking.png.png',28,33,500,80,690,680)
-                scene15.ins_sprite('Lanaya Angry.png.png',29,30,50,60,552,560)
-                scene15.ins_sprite('Lanaya Talking.png.png',31,33,50,60,552,560)
             scene15.ins_audio('Made in Abyss OST - Tomorrow.mp3')
             scene15.ins_decision(34,['Kill Asterios','Let him live'],30,[530,530])
             scene15.run_scene('Futura Book font.ttf',23)
@@ -1697,12 +1681,8 @@ def main():
             scene15a.bg_img('Mystery_Sanctuary.jpg')
             if lanaya_chosen>=2:
                 scene15a.ins_script('scene15aa.txt')
-                scene15a.ins_sprite('Lanaya Talking.png.png',2,2,380,60,552,560)
-                scene15a.ins_sprite('Yorjan Talking.png.png',3,3,380,80,690,680)
             else:
                 scene15a.ins_script('scene15ab.txt')
-                scene15a.ins_sprite('Lanaya Angry.png.png',2,2,380,60,552,560)
-                scene15a.ins_sprite('Yorjan Talking.png.png',4,4,380,80,690,680)
             scene15a.ins_audio('Made in Abyss OST - Tomorrow.mp3')
             scene15a.run_scene('Futura Book font.ttf',23)
         elif what_scene == '23b':
@@ -1710,12 +1690,8 @@ def main():
             scene15b.bg_img('Mystery_Sanctuary.jpg')
             if lanaya_chosen>=3:
                 scene15b.ins_script('scene15ac.txt')
-                scene15b.ins_sprite('Lanaya Happy.png.png',1,1,380,60,552,560)
-                scene15b.ins_sprite('Yorjan Sad.png.png',3,3,380,80,690,680)
             else:
                 scene15b.ins_script('scene15ad.txt')
-                scene15b.ins_sprite('Lanaya Happy.png.png',1,1,380,60,552,560)
-                scene15b.ins_sprite('Yorjan Talking.png.png',3,3,380,80,690,680)
             scene15b.ins_audio('Made in Abyss OST - Tomorrow.mp3')
             scene15b.run_scene('Futura Book font.ttf',23)
         elif what_scene == '24':
@@ -1724,9 +1700,20 @@ def main():
             scene16.ins_audio('Made in Abyss OST - Tomorrow.mp3')
             if lanaya_chosen < 2:
                 scene16.ins_script('scene16a.txt')
+                scene16.ins_sprite('Yorjan Talking.png.png', 2, 2, 600, 60, 690, 680)
+                scene16.ins_sprite('Yorjan Talking.png.png', 5, 5, 600, 60, 690, 680)
+                scene16.ins_sprite('Yorjan Talking.png.png', 9, 9, 600, 60, 690, 680)
                 what_scene = str(int(what_scene)+1)
+
             else:
                 scene16.ins_script('scene16b.txt')
+                scene16.ins_sprite('Lanaya Talking.png.png', 2, 2, 400, 80, 552, 560)
+                scene16.ins_sprite('Yorjan Talking.png.png', 4, 4, 600, 60, 690, 680)
+                scene16.ins_sprite('Lanaya Talking.png.png', 5, 5, 400, 80, 552, 560)
+                scene16.ins_sprite('Yorjan Talking.png.png', 8, 8, 600, 60, 690, 680)
+                scene16.ins_sprite('Lanaya Talking.png.png', 10, 10, 400, 80, 552, 560)
+                scene16.ins_sprite('Yorjan Talking.png.png', 11, 11, 600, 60, 690, 680)
+
                 scene16.ins_decision(12,['Follow Yorjan','Follow Lanaya'],30,[520,520])
             scene16.run_scene('Futura Book font.ttf',23)
         elif what_scene == '25a':
@@ -1734,6 +1721,7 @@ def main():
             scene16a.bg_img('Mystery_Sanctuary.jpg')
             scene16a.ins_audio('Made in Abyss OST - Tomorrow.mp3')
             scene16a.ins_script('scene16aa.txt')
+            scene16a.ins_sprite('Lanaya Talking.png.png', 2, 2, 400, 80, 552, 560)
             scene16a.run_scene('Futura Book font.ttf',23)
         elif what_scene == '25b':
             scene16b = scene()
@@ -1741,157 +1729,145 @@ def main():
             scene16b.ins_audio('Made in Abyss OST - Tomorrow.mp3')
             if yorjan_chosen <1:
                 scene16b.ins_script('scene16ab.txt')
+                scene16b.ins_sprite('Yorjan Angry.png.png', 2, 2, 600, 60, 690, 680)
+                scene16b.ins_sprite('Yorjan Angry.png.png', 4, 4, 600, 60, 690, 680)
+                scene16b.ins_sprite('Yorjan Angry.png.png', 5, 5, 600, 60, 690, 680)
+                scene16b.ins_sprite('Yorjan Angry.png.png', 6, 6, 600, 60, 690, 680)
+                scene16b.ins_sprite('Yorjan Angry.png.png', 8, 8, 600, 60, 690, 680)
+
             else:
                 scene16b.ins_script('scene16ac.txt')
+                scene16b.ins_sprite('Yorjan Sad.png.png', 2, 2, 600, 60, 690, 680)
+
             scene16b.run_scene('Futura Book font.ttf',23)
         elif what_scene == '26':
             scene17 = scene()
             scene17.bg_img('Mystery_Sanctuary.jpg')
             if lanaya_chosen <2 and info_purchased:
-                scene17.ins_script('scene17a.txt') 
-                scene17.ins_sprite('Yorjan Talking.png.png',4,4,380,80,690,680)
-                scene17.ins_sprite('Yorjan Sad.png.png',7,7,380,80,690,680)
-                scene17.ins_sprite('Yorjan Talking.png.png',9,9,380,80,690,680)
-                scene17.ins_sprite('Yorjan Talking.png.png',11,18,380,80,690,680)
-                scene17.ins_sprite('Klaus.png',27,41,250,80,900,1160)
-                scene17.ins_sprite('Lanaya Sad.png.png',42,43,380,60,552,560)
-                scene17.ins_sprite('Klaus.png',44,45,500,80,900,1160)
-                scene17.ins_sprite('Lanaya Sad.png.png',44,44,50,60,552,560)
-                scene17.ins_sprite('Klaus.png',44,45,250,80,900,1160)
-                scene17.ins_sprite('Klaus.png',47,49,250,80,900,1160)
-                scene17.ins_sprite('Klaus.png',51,53,250,80,900,1160)
-                scene17.ins_sprite('Yorjan Talking.png.png',56,56,380,80,690,680)
-                scene17.ins_sprite('Klaus.png',57,57,250,80,900,1160)
-                scene17.ins_sprite('Yorjan Sad.png.png',60,60,380,80,690,680)
-                scene17.ins_sprite('Lanaya Sad.png.png',61,61,380,60,552,560)
+                scene17.ins_script('scene17a.txt')  
             elif lanaya_chosen <2 and not info_purchased:
                 scene17.ins_script('scene17b.txt')
-                scene17.ins_sprite('Yorjan Talking.png.png',4,4,380,80,690,680)
-                scene17.ins_sprite('Yorjan Sad.png.png',7,7,380,80,690,680)
-                scene17.ins_sprite('Yorjan Talking.png.png',9,9,380,80,690,680)
-                scene17.ins_sprite('Yorjan Sad.png.png',11,18,380,80,690,680)
-                scene17.ins_sprite('Klaus.png',27,41,250,80,900,1160)
-                scene17.ins_sprite('Lanaya Sad.png.png',42,42,380,60,552,560)
-                scene17.ins_sprite('Klaus.png',43,43,250,80,900,1160)
-                scene17.ins_sprite('Klaus.png',45,45,250,80,900,1160)
-                scene17.ins_sprite('Klaus.png',47,49,250,80,900,1160)
-                scene17.ins_sprite('Yorjan Talking.png.png',51,51,380,80,690,680)
             elif lanaya_chosen >=2 and lanaya_chosen > yorjan_chosen and yorjan_chosen > 0:
                 scene17.ins_script('scene17c.txt')
-                scene17.ins_sprite('Yorjan Talking.png.png',4,4,380,80,690,680)
-                scene17.ins_sprite('Yorjan Sad.png.png',7,7,380,80,690,680)
-                scene17.ins_sprite('Yorjan Talking.png.png',9,9,380,80,690,680)
-                scene17.ins_sprite('Yorjan Sad.png.png',11,16,380,80,690,680)
-                scene17.ins_sprite('Lanaya Sad.png.png',19,19,380,60,552,560)
-                scene17.ins_sprite('Lanaya Sad.png.png',21,25,380,60,552,560)
-                scene17.ins_sprite('Klaus.png',33,52,250,80,900,1160)
             elif lanaya_chosen >=2 and yorjan_chosen <1:
                 scene17.ins_script('scene17d.txt')
-                scene17.ins_sprite('Lanaya Talking.png.png',4,4,380,60,552,560)
-                scene17.ins_sprite('Lanaya Sad.png.png',7,7,380,60,552,560)
-                scene17.ins_sprite('Lanaya Talking.png.png',9,9,380,60,552,560)
-                scene17.ins_sprite('Lanaya Sad.png.png',11,15,380,60,552,560)
-                scene17.ins_sprite('Klaus.png',22,41,250,80,900,1160)
             elif lanaya_chosen == yorjan_chosen:
                 scene17.ins_script('scene17e.txt')
-                scene17.ins_sprite('Yorjan Talking.png.png',4,4,380,80,690,680)
-                scene17.ins_sprite('Yorjan Sad.png.png',7,7,380,80,690,680)
-                scene17.ins_sprite('Yorjan Talking.png.png',9,9,380,80,690,680)
-                scene17.ins_sprite('Klaus.png',14,33,250,80,900,1160)
             scene17.ins_audio('Made in Abyss OST - Tomorrow.mp3')
             scene17.run_scene('Futura Book font.ttf',23)
         elif what_scene == '27':
             scene18 = scene()
             scene18.bg_img('Mystery_Sanctuary.jpg')
             scene18.ins_script('scene18.txt')
+            scene18.ins_sprite('Klaus.png.png',1,1,250,80,900,1160)
+            scene18.ins_sprite('Klaus.png.png',4,4,250,80,900,1160)
+            scene18.ins_sprite('Klaus.png.png',7,7,250,80,900,1160)
+            scene18.ins_sprite('Klaus.png.png',8,8,250,80,900,1160)
+
             scene18.ins_audio('Made in Abyss OST - Tomorrow.mp3')
             scene18.run_scene('Futura Book font.ttf',23)
+
         elif what_scene == '28':
             if lanaya_chosen < 2 and info_purchased:
                 scene20 = scene()
                 scene20.bg_img('Mystery_Sanctuary.jpg')
                 scene20.ins_script('scene20.txt')
+                scene20.ins_sprite('Klaus.png.png',2,2,250,80,900,1160)
+                scene20.ins_sprite('Klaus.png.png',2,2,250,80,900,1160)
                 scene20.ins_audio('Made in Abyss OST - Tomorrow.mp3')
-                scene20.run_scene('Futura Book font.ttf',23)
+                scene20.run_scene('Futura Book font.ttf', 23)
             elif lanaya_chosen < 2 and not info_purchased:
                 scene19 = scene()
                 scene19.bg_img('Mystery_Sanctuary.jpg')
                 scene19.ins_script('scene19.txt')
-                scene19.ins_sprite('Klaus.png',2,7,250,80,900,1160)
-                scene19.ins_sprite('Yorjan Sad.png.png',8,8,380,80,690,680)
-                scene19.ins_sprite('Klaus.png',15,15,250,80,900,1160)
-                scene19.ins_sprite('Klaus.png',22,22,250,80,900,1160)
                 scene19.ins_audio('Made in Abyss OST - Tomorrow.mp3')
-                scene19.run_scene('Futura Book font.ttf',23)
+                scene19.run_scene('Futura Book font.ttf', 23)
             elif yorjan_chosen < 1:
                 scene21 = scene()
                 scene21.bg_img('Mystery_Sanctuary.jpg')
                 scene21.ins_script('scene21.txt')
-                scene21.ins_sprite('Klaus.png',3,3,250,80,900,1160)
-                scene21.ins_sprite('Claude Resurrected.png.png',4,4,380,30,600,700)
-                scene21.ins_sprite('Yorjan Sad.png.png',5,5,380,80,690,680)
-                scene21.ins_sprite('Claude Resurrected Angry.png.png',7,7,380,30,600,700)
-                scene21.ins_sprite('Yorjan Talking.png.png',9,9,380,80,690,680)
-                scene21.ins_sprite('Lanaya Talking.png.png',11,11,380,60,552,560)
                 scene21.ins_audio('Made in Abyss OST - Tomorrow.mp3')
-                scene21.run_scene('Futura Book font.ttf',23)
+                scene21.run_scene('Futura Book font.ttf', 23)
             elif yorjan_chosen == lanaya_chosen:
                 scene22 = scene()
                 scene22.bg_img('Mystery_Sanctuary.jpg')
                 scene22.ins_script('scene22.txt')
                 scene22.ins_audio('Made in Abyss OST - Tomorrow.mp3')
-                scene22.run_scene('Futura Book font.ttf',23)
+                scene22.ins_sprite('Klaus.png.png',3,3,250,80,900,1160)
+                scene22.ins_sprite('Klaus.png.png',5,5,250,80,900,1160)
+                scene22.ins_sprite('Lanaya Angry.png.png', 6, 6, 400, 80, 552, 560)
+                scene22.ins_sprite('Yorjan Talking.png.png', 7, 7, 600, 60, 690, 680)
+                scene22.ins_sprite('Lanaya Talking.png.png', 11, 11, 400, 80, 552, 560)
+                scene22.ins_sprite('Lanaya Talking.png.png', 13, 13, 400, 80, 552, 560)
+                scene22.ins_sprite('Yorjan Talking.png.png', 15, 15, 600, 60, 690, 680)
+                scene22.ins_sprite('Klaus.png.png',18,18,250,80,900,1160)
+                scene22.ins_sprite('Klaus.png.png',20,20,250,80,900,1160)
+                scene22.ins_sprite('Klaus.png.png',24,24,250,80,900,1160)
+                scene22.ins_sprite('Lanaya Talking.png.png', 26, 26, 400, 80, 552, 560)
+                scene22.ins_sprite('Yorjan Talking.png.png', 28, 28, 600, 60, 690, 680)
+                scene22.run_scene('Futura Book font.ttf', 23)
             elif yorjan_chosen == 1 and final_yorjan_chosen:
                 scene24 = scene()
                 scene24.bg_img('Mystery_Sanctuary.jpg')
                 scene24.ins_script('scene24.txt')
                 scene24.ins_audio('Made in Abyss OST - Tomorrow.mp3')
-                scene24.run_scene('Futura Book font.ttf',23)
+                scene24.ins_sprite('Klaus.png.png',2,2,250,80,900,1160)
+                scene24.ins_sprite('Yorjan Talking.png.png', 4, 4, 600, 60, 690, 680)
+                scene24.ins_sprite('Klaus.png.png',5,5,250,80,900,1160)
+                scene24.ins_sprite('Lanaya Talking.png.png', 6, 6, 400, 80, 552, 560)
+                scene24.ins_sprite('Yorjan Talking.png.png', 7, 7, 600, 60, 690, 680)
+                scene24.ins_sprite('Klaus.png.png',8,8,250,80,900,1160)
+                scene24.ins_sprite('Klaus.png.png',12,12,250,80,900,1160)
+                scene24.ins_sprite('Claude Resurrected Angry.png.png',13,13,320,60,750,660)
+                scene24.ins_sprite('Claude Resurrected.png.png',15,15,320,60,750,660)
+                scene24.ins_sprite('Yorjan Talking.png.png', 16, 16, 600, 60, 690, 680)
+                scene24.ins_sprite('Lanaya Talking.png.png', 18, 18, 400, 80, 552, 560)
+                scene24.ins_sprite('Klaus.png.png',19,19,250,80,900,1160)
+                scene24.ins_sprite('Claude Resurrected.png.png',20,20,320,60,750,660)
+                scene24.ins_sprite('Lanaya Angry.png.png', 22, 22, 400, 80, 552, 560)
+                scene24.ins_sprite('Klaus.png.png',25,25,250,80,900,1160)
+                scene24.ins_sprite('Lanaya Angry.png.png', 26, 26, 400, 80, 552, 560)
+                scene24.ins_sprite('Klaus.png.png',27,27,250,80,900,1160)
+                scene24.ins_sprite('Klaus.png.png',28,28,250,80,900,1160)
+                scene24.ins_sprite('Yorjan Talking.png.png', 30, 30, 600, 60, 690, 680)
+                scene24.ins_sprite('Lanaya Talking.png.png', 31, 31, 400, 80, 552, 560)
+                scene24.ins_sprite('Klaus.png.png',34,34,250,80,900,1160)
+                scene24.ins_sprite('Klaus.png.png',36,36,250,80,900,1160)
+                scene24.ins_sprite('Lanaya Talking.png.png', 37, 37, 400, 80, 552, 560)
+                scene24.ins_sprite('Yorjan Talking.png.png', 38, 38, 600, 60, 690, 680)
+                scene24.ins_sprite('Yorjan Talking.png.png', 42, 42, 600, 60, 690, 680)
+                scene24.ins_sprite('Lanaya Talking.png.png', 43, 43, 400, 80, 552, 560)
+                scene24.ins_sprite('Claude Resurrected.png.png',44,44,320,60,750,660)
+                scene24.ins_sprite('Claude Resurrected.png.png',45,45,320,60,750,660)
+                scene24.ins_sprite('Claude Resurrected.png.png',46,46,320,60,750,660)
+                scene24.ins_sprite('Claude Resurrected.png.png',48,48,320,60,750,660)
+                scene24.ins_sprite('Lanaya Talking.png.png', 49, 49, 400, 80, 552, 560)
+                scene24.ins_sprite('Yorjan Talking.png.png', 50, 50, 600, 60, 690, 680)
+                scene24.ins_sprite('Claude Resurrected.png.png',51,51,320,60,750,660)
+                scene24.ins_sprite('Claude Resurrected.png.png',52,52,320,60,750,660)
+                scene24.ins_sprite('Lanaya Sad.png.png', 53, 53, 400, 80, 552, 560)
+                scene24.ins_sprite('Yorjan Sad.png.png', 54, 54, 600, 60, 690, 680)
+
+
+                scene24.run_scene('Futura Book font.ttf', 23)
             elif doll_purchased:
                 scene25 = scene()
                 scene25.bg_img('Mystery_Sanctuary.jpg')
                 scene25.ins_script('scene25.txt')
-                scene25.ins_sprite('Klaus.png',2,2,250,80,900,1160)
-                scene21.ins_sprite('Claude Resurrected Angry.png.png',3,3,380,30,600,700)
-                scene25.ins_sprite('Yorjan Talking.png.png',4,4,380,80,690,680)
-                scene25.ins_sprite('Klaus.png',5,6,250,80,900,1160)
-                scene25.ins_sprite('Yorjan Talking.png.png',10,10,380,80,690,680)
-                scene25.ins_sprite('Klaus.png',11,11,250,80,900,1160)
-                scene21.ins_sprite('Claude Resurrected.png.png',13,13,380,30,600,700)
-                scene25.ins_sprite('Klaus.png',16,16,250,80,900,1160)
-                scene25.ins_sprite('Klaus.png',19,21,250,80,900,1160)
                 scene25.ins_audio('Made in Abyss OST - Tomorrow.mp3')
-                scene25.run_scene('Futura Book font.ttf',23)
+                scene25.run_scene('Futura Book font.ttf', 23)
             else:
                 scene23 = scene()
                 scene23.bg_img('Mystery_Sanctuary.jpg')
                 scene23.ins_script('scene23.txt')
-                scene23.ins_sprite('Klaus.png',2,2,250,80,900,1160)
-                scene23.ins_sprite('Yorjan Talking.png.png',4,4,380,80,690,680)
-                scene23.ins_sprite('Klaus.png',5,5,250,80,900,1160)
-                scene23.ins_sprite('Lanaya Angry.png.png',6,7,50,60,552,560)
-                scene23.ins_sprite('Yorjan Talking.png.png',7,7,500,80,690,680)
-                scene23.ins_sprite('Klaus.png',8,8,250,80,900,1160)
-                scene23.ins_sprite('Lanaya Angry.png.png',10,10,380,60,552,560)
-                scene23.ins_sprite('Yorjan Angry.png.png',12,12,500,80,690,680)
-                scene23.ins_sprite('Claude Resurrected.png.png',13,13,380,30,600,700)
-                scene23.ins_sprite('Claude Resurrected Angry.png.png',14,16,380,30,600,700)
-                scene23.ins_sprite('Klaus.png',17,17,250,80,900,1160)
-                scene23.ins_sprite('Lanaya Angry.png.png',19,19,380,60,552,560)
-                scene23.ins_sprite('Klaus.png',22,25,500,80,900,1160)
-                scene23.ins_sprite('Lanaya Talking.png.png',23,25,380,60,552,560)
-                scene23.ins_sprite('Yorjan Talking.png.png',27,27,380,80,690,680)
-                scene23.ins_sprite('Lanaya Talking.png.png',28,28,380,60,552,560)
-                scene23.ins_sprite('Klaus.png',31,31,500,80,900,1160)
-                scene23.ins_sprite('Klaus.png',33,33,500,80,900,1160)
-                scene23.ins_sprite('Lanaya Happy.png.png',34,35,50,60,552,560)
-                scene23.ins_sprite('Yorjan Happy.png.png',35,35,500,80,690,680)
                 scene23.ins_audio('Made in Abyss OST - Tomorrow.mp3')
-                scene23.run_scene('Futura Book font.ttf',23)
+                scene23.run_scene('Futura Book font.ttf', 23)
+
             what_scene = '0'
             start_ending()
-    pygame.quit()
-            
+        pygame.quit()
 
-if __name__ == '__main__':
-    main()
+        if __name__ == '__main__':
+            main()
+
+
